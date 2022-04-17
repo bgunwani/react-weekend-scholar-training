@@ -41,44 +41,11 @@
 
 // Demonstration 3:
 
-// class Person {
-//     constructor() {
-//         console.log('Person Constructor Called!!');
-//         this.name = 'Gautam';
-//         this.age = 23;
-//     }
-//     displayDetails = function () {
-//         console.log('Name : ' + this.name);
-//         console.log('Age : ' + this.age);
-//     }
-// }
-
-// class Customer extends Person {
-//     constructor() {
-//         super();
-//         console.log('Customer Constructor Called!!');
-//         this.article = 'article1';
-//         this.amount = 1000;
-//     }
-//     displayDetails = function () {
-//         super.displayDetails();
-//         console.log('Article : ' + this.article);
-//         console.log('Amount : ' + this.amount);
-//     }
-// }
-
-// var objOne = new Customer();
-// objOne.displayDetails();
-
-// -------------------------------------------------------- //
-
-// Demonstration 3:
-
 class Person {
-    constructor(name, age) {
+    constructor() {
         console.log('Person Constructor Called!!');
-        this.name = name;
-        this.age = age;
+        this.name = 'Gautam';
+        this.age = 23;
     }
     displayDetails1 = function () {
         console.log('Name : ' + this.name);
@@ -87,19 +54,53 @@ class Person {
 }
 
 class Customer extends Person {
-    constructor(name, age, article, amount) {
-        super(name, age);
+    constructor() {
+        super();
         console.log('Customer Constructor Called!!');
-        this.article = article;
-        this.amount = amount;
+        this.article = 'article1';
+        this.amount = 1000;
     }
     displayDetails2 = function () {
+        //super.displayDetails();
         console.log('Article : ' + this.article);
         console.log('Amount : ' + this.amount);
     }
 }
 
-var objOne = new Customer('Kochhar', 34, 'Mouse', 1000);
+var objOne = new Customer();
 objOne.displayDetails1();
 objOne.displayDetails2();
+
+// -------------------------------------------------------- //
+
+// Demonstration 3:
+
+// class Person {
+//     constructor(name, age) {
+//         console.log('Person Constructor Called!!');
+//         this.name = name;
+//         this.age = age;
+//     }
+//     displayDetails1 = function () {
+//         console.log('Name : ' + this.name);
+//         console.log('Age : ' + this.age);
+//     }
+// }
+
+// class Customer extends Person {
+//     constructor(name, age, article, amount) {
+//         super(name, age);
+//         console.log('Customer Constructor Called!!');
+//         this.article = article;
+//         this.amount = amount;
+//     }
+//     displayDetails2 = function () {
+//         console.log('Article : ' + this.article);
+//         console.log('Amount : ' + this.amount);
+//     }
+// }
+
+// var objOne = new Customer('Kochhar', 34, 'Mouse', 1000);
+// objOne.displayDetails1();
+// objOne.displayDetails2();
 
